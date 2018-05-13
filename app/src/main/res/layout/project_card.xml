@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/card_album_radius"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/thumbnail_placeholder"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+
+            <TextView
+                android:id="@+id/title"
+                android:singleLine="true"
+                android:text="Title"
+                android:layout_below="@id/thumbnail"
+                android:textSize="15sp"
+                android:textColor="@color/album_title"
+                android:paddingLeft="@dimen/album_title_padding"
+                android:paddingRight="15dp"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/album_title_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/projectId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:text="1234"
+                android:textSize="14sp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/album_title"
+                />
+
+            <ImageView
+            android:id="@+id/overflow"
+            android:layout_width="@dimen/ic_album_overflow_width"
+            android:layout_height="@dimen/ic_album_overflow_height"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/thumbnail"
+            android:layout_marginTop="@dimen/ic_album_overflow_margin_top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dots" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
